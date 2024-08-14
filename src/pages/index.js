@@ -89,22 +89,23 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
         <section
           ref={(el) => (elementsRef.current[0] = el)}
           id="about"
-          className="min-h-screen flex flex-col justify-center py-20 dark:bg-gray-900 slide-up"
+          className="min-h-screen flex flex-col justify-center py-10 dark:bg-gray-900 slide-up"
         >
           <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-8">
-              <h1 className="mb-6 text-4xl font-bold">About</h1>{" "}
-              {/* Section title */}
-              <div className="text-xl mb-6 typewriter">
+            <div className="mb-4">
+              <h1 className="text-left text-8xl font-light tracking-wide text-black-200 dark:text-gray-300">
+                SHREEVERSHITH KOLLABETTU
+              </h1>
+              <div className="text-xl mb-4 typewriter">
                 <Typewriter
                   options={{
                     strings: ["I am the guy you are looking for"], // Text for typewriter effect
                     autoStart: true, // Auto start the typewriter
-                    loop: true, // Do not loop the typewriter effect
+                    loop: false, // Do not loop the typewriter effect
                   }}
                 />
               </div>
-              <p className="text-l mb-6">
+              <p className="text-l mb-4">
                 If you’re seeking a versatile professional with a
                 customer-centric approach, creative problem-solving skills, and
                 a growth mindset, let’s connect and explore opportunities.
@@ -114,21 +115,20 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
             </div>
 
             <div className="flex flex-col md:flex-row items-center w-full">
-              <div className="text-left flex-1 mb-8 md:mb-0">
-                <h2 className="text-2xl font-bold mb-4">My Skills</h2>{" "}
-                {/* Subsection title */}
-                <p className="mb-4">
+              <div className="text-left flex-1 mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold mb-3">My Skills</h2>{" "}
+                <p className="mb-3">
                   SQL. R. Python. SAS. PowerBI. Tableau. Alteryx. Hadoop. Sqoop.
                   Hive. Impala. AWS Data engineering and ML Services. Adobe
                   Creative Suite. Appian. UiPath.
                 </p>
-                <p className="italic mb-6">
+                <p className="italic mb-3">
                   Data Analysis and Interpretation · Business Process Modeling
                   and Optimization · Product Strategy · Market Research · Agile
                   Methodologies · Negotiation and Influencing · Problem-Solving
                   · Stakeholder Management · Project management
                 </p>
-                <div className="flex flex-wrap space-x-4 mt-4">
+                <div className="flex flex-wrap space-x-4 mt-3">
                   <a
                     href="mailto:shreevershith@gmail.com"
                     target="_blank"
@@ -170,59 +170,8 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   alt="Profile"
                   className="rounded-t-lg rounded-b-lg w-[28rem] h-[40rem] object-cover"
                 />{" "}
-                {/* Profile image */}
               </div>
             </div>
-
-            {/*}
-            <div className="mt-12">
-              <h2 className="text-2xl font-bold mb-4">Impact Stories</h2>{" "}
-              // Subsection title 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform">
-                  <h3 className="text-xl font-semibold mb-4">Impact Story!!</h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    My journey with Alteryx!
-                  </p>
-                  <img
-                    src="/images/impact-story.jpg"
-                    alt="Impact Story"
-                    className="rounded-t-lg w-full object-cover h-48 mt-4"
-                  />
-                  <a
-                    href="https://www.alteryx.com/impact-story"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-blue-500 hover:underline"
-                  >
-                    Read More
-                  </a>
-                </div>
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition-transform">
-                  <h3 className="text-xl font-semibold mb-4">
-                    I am a Super OWL ;)
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    Super OWL is one of the 12 different awards given out in the
-                    Naveen Jindal School Of Management annual OWLIE Awards.
-                  </p>
-                  <img
-                    src="/images/super-owl.jpg"
-                    alt="Super OWL"
-                    className="rounded-t-lg w-full object-cover h-48 mt-4"
-                  />
-                  <a
-                    href="https://www.owlieawards.com/super-owl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-blue-500 hover:underline"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            */}
           </div>
         </section>
 
