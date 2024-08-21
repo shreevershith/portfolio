@@ -9,8 +9,8 @@ import {
   FaLinkedin,
   FaInstagram,
   FaGithub,
-  FaCertificate,
-} from "react-icons/fa"; // Import icons from react-icons library
+  FaMicrosoft,
+} from "react-icons/fa"; // Import icons including Microsoft from react-icons library
 import Link from "next/link"; // Next.js Link component for client-side navigation
 import Slider from "react-slick"; // Slider component for carousels
 import "slick-carousel/slick/slick.css"; // Slider styles
@@ -360,19 +360,22 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
             </h2>
             <Slider {...settings}>
               {certifications.map((certification, index) => (
-                <div key={index} className="px-4">
+                <div
+                  key={index}
+                  className="px-4 flex flex-col justify-between h-[400px]"
+                >
                   <a
                     href={certification.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block transform transition-transform hover:scale-105"
+                    className="block transform transition-transform hover:scale-105 h-full"
                   >
-                    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center">
-                      <FaCertificate className="text-blue-500 dark:text-blue-300 mb-4" />
-                      <h3 className="text-2xl font-semibold mb-4">
+                    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+                      {certification.icon} {/* Display the icon */}
+                      <h3 className="text-2xl font-semibold mb-4 flex-grow-0">
                         {certification.title}
                       </h3>
-                      <p className="text-gray-700 dark:text-gray-300">
+                      <p className="text-gray-700 dark:text-gray-300 flex-grow">
                         {certification.description}
                       </p>
                     </div>
