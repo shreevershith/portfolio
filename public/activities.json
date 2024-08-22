@@ -1,24 +1,23 @@
 [
-    {
-      "date": "August 21st 2023",
-      "description": "Joined The University of Texas at Dallas to pursue ‘MS in Business Analytics and Artificial Intelligence’ with a minor in ‘Machine Learning’ "
-    },
-    {
-      "date": "May 4th 2023",
-      "description": "Showcased findings of developing an efficient neural network that improved photometric redshift estimates by 70% thereby reducing estimation time, at the 10th ICICSE. The event was sponsored by Springer and the Computer Society of India."
-    },
-    {
-      "date": "Mar 14 2022",
-      "description": "Earned the Infosys Insta Award for successfully developing and deploying a multilingual chatbot using Microsoft Bot Framework and Azure LogicApps for customer support, resulting in a 13% increase in client leads."
-    },
-    {
-      "date": "March 3 2021",
-      "description": "Joined Infosys as ‘Systems Engineer’, I'm officially an Infocian"
-    },
-    {
-      "date": "Jul 1, 2020",
-      "description": "‘Virtual Reality: The New Reality’, m first writing was published in CSI Communications July 2020 Edition",
-      "link": "https://www.researchgate.net/publication/343095838_Virtual_Reality_An_Overview"
-    }
-  ]
-  
+  {
+    "date": "August 21st 2023",
+    "description": "Joined The University of Texas at Dallas to pursue 'MS in Business Analytics and Artificial Intelligence' with a minor in 'Machine Learning'"
+  },
+  {
+    "date": "May 4th 2023",
+    "description": "Showcased findings of developing an efficient neural network that improved photometric redshift estimates by 70% thereby reducing estimation time, at the 10th ICICSE. The event was sponsored by Springer and the Computer Society of India."
+  },
+  {
+    "date": "Mar 14 2022",
+    "description": "Earned the Infosys Insta Award for successfully developing and deploying a multilingual chatbot using Microsoft Bot Framework and Azure LogicApps for customer support, resulting in a 13% increase in client leads."
+  },
+  {
+    "date": "March 3 2021",
+    "description": "Joined Infosys as 'Systems Engineer', I'm officially an Infocian"
+  },
+  {
+    "date": "Jul 1, 2020",
+    "description": "'Virtual Reality: The New Reality', my first writing was published in CSI Communications July 2020 Edition",
+    "link": "https://www.researchgate.net/publication/343095838_Virtual_Reality_An_Overview"
+  }
+]

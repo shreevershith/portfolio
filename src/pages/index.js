@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa"; // Import icons including Microsoft from react-icons library
 import Link from "next/link"; // Next.js Link component for client-side navigation
 import Slider from "react-slick"; // Slider component for carousels
+import Image from "next/image"; // Import Next.js Image component for optimized images
 import "slick-carousel/slick/slick.css"; // Slider styles
 import "slick-carousel/slick/slick-theme.css"; // Additional slider styles
 import certifications from "../data/certifications"; // Custom data file for certifications
@@ -109,12 +110,12 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 />
               </div>
               <p className="text-l mb-4">
-                If you're looking for a versatile software professional with
-                expertise in AI and Business Analytics, I bridge the gap between
-                technology and business needs, driving efficiency and growth
-                through innovative solutions. Let's connect to explore how my
-                technical skills and passion for innovation can solve your
-                real-world business challenges.
+                If you&apos;re looking for a versatile software professional
+                with expertise in AI and Business Analytics, I bridge the gap
+                between technology and business needs, driving efficiency and
+                growth through innovative solutions. Let&apos;s connect to
+                explore how my technical skills and passion for innovation can
+                solve your real-world business challenges.
               </p>
             </div>
 
@@ -122,7 +123,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               <div className="text-left flex-1 mb-4 md:mb-0">
                 <h2 className="text-2xl font-bold mb-3">My Skills</h2>{" "}
                 <p className="mb-3">
-                  SQL. R. Python. C#. .NET. JavaScript. Power BI. Postman. Azure
+                  SQL. R. Python. C#. NET. JavaScript. Power BI. Postman. Azure
                   DevOps. Git. Microsoft Azure. Microsoft Bot Framework.
                   Microsoft Power Apps. Microsoft SQL Server. Hadoop Framework
                   (Flume, Sqoop, Impala/Hive, Spark, YARN Map Reduce, HDFS,
@@ -173,11 +174,13 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               </div>
 
               <div className="md:ml-8 flex-shrink-0">
-                <img
+                <Image
                   src="/images/profile.jpg"
                   alt="Profile"
-                  className="rounded-t-lg rounded-b-lg w-[28rem] h-[40rem] object-cover"
-                />{" "}
+                  width={448} // Replace with your actual image width
+                  height={640} // Replace with your actual image height
+                  className="rounded-t-lg rounded-b-lg object-cover"
+                />
               </div>
             </div>
           </div>
@@ -202,10 +205,12 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/sdss-new-logo-72dpi.png"
                   alt="Estimation of Photometric Redshift"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
                 <h3 className="text-2xl font-semibold mb-4">
                   Estimation Of Photometric Redshift Using DL
@@ -239,10 +244,12 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/python.jpg"
                   alt="Employee Database using Python"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
                 <h3 className="text-2xl font-semibold mb-4">
                   Employee Database Application Using Python
@@ -263,10 +270,12 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/nextjs.jpg"
                   alt="portfolio"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
                 <h3 className="text-2xl font-semibold mb-4">
                   Portfolio Website using Next.Js and Tailwind CSS
@@ -292,14 +301,22 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/postgreSQL.png"
-                  alt="AirlineDatabaseManagementSystem"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  alt="Airline Database Management System"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">Airline Database Management System</h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  Airline Database Management System
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                The Air Database Management System is designed to handle and organize information within the aviation sector. It incorporates airports, cities, passengers, alliances, airlines, and airplane relationships, each with specific attributes to capture relevant details
+                  The Air Database Management System is designed to handle and
+                  organize information within the aviation sector. It
+                  incorporates airports, cities, passengers, alliances,
+                  airlines, and airplane relationships, each with specific
+                  attributes to capture relevant details
                 </p>
               </div>
 
@@ -312,14 +329,22 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/cnn.gif"
-                  alt="AnalysisOfSimulatedLogicCircuitsUsingCNN"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  alt="Analysis of Simulated Logic Circuits Using CNN"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">Analysis of simulated logic circuits using CNN</h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  Analysis of Simulated Logic Circuits Using CNN
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                This is a project based on CNN Algorithm where the model trains itself with train images to predict whether the logic circuits overlap with each other and it also predicts whether the circuits are in their grid or are extended to another grid.
+                  This is a project based on CNN Algorithm where the model
+                  trains itself with train images to predict whether the logic
+                  circuits overlap with each other and it also predicts whether
+                  the circuits are in their grid or are extended to another
+                  grid.
                 </p>
               </div>
 
@@ -332,14 +357,20 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   )
                 }
               >
-                <img
+                <Image
                   src="/images/opengl.png"
-                  alt="2DTableTennisGameUsingGLUT"
-                  className="rounded-t-lg w-full object-cover h-48 mb-4"
+                  alt="2D Table Tennis Game Using GLUT"
+                  width={500}
+                  height={200}
+                  className="rounded-t-lg w-full object-cover mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">2D Table Tennis Game using GLUT</h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  2D Table Tennis Game Using GLUT
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                A 2D animation based on the table tennis game using C++ and glut package with the help of Visual Studio/CodeBlocks software.
+                  A 2D animation based on the table tennis game using C++ and
+                  glut package with the help of Visual Studio/CodeBlocks
+                  software.
                 </p>
               </div>
             </div>
