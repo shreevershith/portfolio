@@ -43,7 +43,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
 
         {/* CV Download Button */}
         <a
-          href="https://drive.google.com/link-to-your-cv" // Replace with your actual CV link
+          href="https://drive.google.com/file/d/1KSgPG09Y9RNmOQHfyViFGE9OUUuOb1cL/view?usp=drive_link" // Replace with your actual CV link
           target="_blank"
           rel="noopener noreferrer"
           className="relative flex items-center text-white p-2 cursor-pointer"

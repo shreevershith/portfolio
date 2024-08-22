@@ -1,4 +1,5 @@
 // pages/index.js
+import React from "react"; // Import React
 import Head from "next/head"; // Next.js component to modify the document head
 import Navbar from "../components/Navbar"; // Custom Navbar component
 import Footer from "../components/Footer"; // Custom Footer component
@@ -99,18 +100,21 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               <div className="text-xl mb-4 typewriter">
                 <Typewriter
                   options={{
-                    strings: ["I am the guy you are looking for"], // Text for typewriter effect
+                    strings: [
+                      "The software professional you need, with a sharp focus on AI-driven solutions and business analytics to transform your challenges into success.",
+                    ], // Text for typewriter effect
                     autoStart: true, // Auto start the typewriter
-                    loop: false, // Do not loop the typewriter effect
+                    loop: true, // Do not loop the typewriter effect
                   }}
                 />
               </div>
               <p className="text-l mb-4">
-                If you’re seeking a versatile professional with a
-                customer-centric approach, creative problem-solving skills, and
-                a growth mindset, let’s connect and explore opportunities.
-                Together, we can make a positive impact through innovative
-                solutions and sustainable technologies.
+                If you're looking for a versatile software professional with
+                expertise in AI and Business Analytics, I bridge the gap between
+                technology and business needs, driving efficiency and growth
+                through innovative solutions. Let's connect to explore how my
+                technical skills and passion for innovation can solve your
+                real-world business challenges.
               </p>
             </div>
 
@@ -118,15 +122,19 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               <div className="text-left flex-1 mb-4 md:mb-0">
                 <h2 className="text-2xl font-bold mb-3">My Skills</h2>{" "}
                 <p className="mb-3">
-                  SQL. R. Python. SAS. PowerBI. Tableau. Alteryx. Hadoop. Sqoop.
-                  Hive. Impala. AWS Data engineering and ML Services. Adobe
-                  Creative Suite. Appian. UiPath.
+                  SQL. R. Python. C#. .NET. JavaScript. Power BI. Postman. Azure
+                  DevOps. Git. Microsoft Azure. Microsoft Bot Framework.
+                  Microsoft Power Apps. Microsoft SQL Server. Hadoop Framework
+                  (Flume, Sqoop, Impala/Hive, Spark, YARN Map Reduce, HDFS,
+                  HBase, Pig).
                 </p>
                 <p className="italic mb-3">
-                  Data Analysis and Interpretation · Business Process Modeling
-                  and Optimization · Product Strategy · Market Research · Agile
-                  Methodologies · Negotiation and Influencing · Problem-Solving
-                  · Stakeholder Management · Project management
+                  Natural Language Processing · Algorithms · Debugging ·
+                  Optimization · MVC · API Management · Software Engineering ·
+                  Software Development Life Cycle · Data Science · Machine
+                  Learning · Data Analysis and Interpretation · Business Process
+                  Modeling and Optimization · Agile Methodologies ·
+                  Problem-Solving
                 </p>
                 <div className="flex flex-wrap space-x-4 mt-3">
                   <a
@@ -279,19 +287,19 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() =>
                   window.open(
-                    "https://github.com/shreevershith/project4",
+                    "https://github.com/shreevershith/AirlineDatabaseManagementSystem",
                     "_blank"
                   )
                 }
               >
                 <img
-                  src="/images/project4.jpg"
-                  alt="Project 4"
+                  src="/images/postgreSQL.png"
+                  alt="AirlineDatabaseManagementSystem"
                   className="rounded-t-lg w-full object-cover h-48 mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">Project 4</h3>
+                <h3 className="text-2xl font-semibold mb-4">Airline Database Management System</h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Description of Project 4. This project involves...
+                The Air Database Management System is designed to handle and organize information within the aviation sector. It incorporates airports, cities, passengers, alliances, airlines, and airplane relationships, each with specific attributes to capture relevant details
                 </p>
               </div>
 
@@ -299,19 +307,19 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() =>
                   window.open(
-                    "https://github.com/shreevershith/project5",
+                    "https://github.com/shreevershith/AnalysisOfSimulatedLogicCircuitsUsingCNN",
                     "_blank"
                   )
                 }
               >
                 <img
-                  src="/images/project5.jpg"
-                  alt="Project 5"
+                  src="/images/cnn.gif"
+                  alt="AnalysisOfSimulatedLogicCircuitsUsingCNN"
                   className="rounded-t-lg w-full object-cover h-48 mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">Project 5</h3>
+                <h3 className="text-2xl font-semibold mb-4">Analysis of simulated logic circuits using CNN</h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Description of Project 5. This project involves...
+                This is a project based on CNN Algorithm where the model trains itself with train images to predict whether the logic circuits overlap with each other and it also predicts whether the circuits are in their grid or are extended to another grid.
                 </p>
               </div>
 
@@ -319,19 +327,19 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() =>
                   window.open(
-                    "https://github.com/shreevershith/project6",
+                    "https://github.com/shreevershith/2DTableTennisGameUsingGLUT",
                     "_blank"
                   )
                 }
               >
                 <img
-                  src="/images/project6.jpg"
-                  alt="Project 6"
+                  src="/images/opengl.png"
+                  alt="2DTableTennisGameUsingGLUT"
                   className="rounded-t-lg w-full object-cover h-48 mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-4">Project 6</h3>
+                <h3 className="text-2xl font-semibold mb-4">2D Table Tennis Game using GLUT</h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Description of Project 6. This project involves...
+                A 2D animation based on the table tennis game using C++ and glut package with the help of Visual Studio/CodeBlocks software.
                 </p>
               </div>
             </div>
@@ -376,7 +384,14 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                         {certification.title}
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300 flex-grow">
-                        {certification.description}
+                        {certification.description
+                          .split("\n")
+                          .map((line, index) => (
+                            <React.Fragment key={index}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}{" "}
                       </p>
                     </div>
                   </a>
@@ -398,7 +413,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
             </h2>
             <div className="border-t border-gray-300 dark:border-gray-600 pt-8">
               <ul>
-                {activities.slice(0, 6).map((activity, index) => (
+                {activities.slice(0, 3).map((activity, index) => (
                   <li key={index} className="mb-8">
                     <h3 className="text-xl font-semibold mb-2">
                       {activity.date}

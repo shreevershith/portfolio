@@ -1,27 +1,23 @@
 [
     {
-      "date": "Nov 30, 2020",
-      "description": "Started at Facebook Seattle as a Research Scientist."
+      "date": "August 21st 2023",
+      "description": "Joined The University of Texas at Dallas to pursue ‘MS in Business Analytics and Artificial Intelligence’ with a minor in ‘Machine Learning’ "
     },
     {
-      "date": "Jun 12, 2020",
-      "description": "Joining Facebook Seattle as a Research Scientist in Dec ‘20"
+      "date": "May 4th 2023",
+      "description": "Showcased findings of developing an efficient neural network that improved photometric redshift estimates by 70% thereby reducing estimation time, at the 10th ICICSE. The event was sponsored by Springer and the Computer Society of India."
     },
     {
-      "date": "Jan 14, 2020",
-      "description": "I’m now officially ABD."
+      "date": "Mar 14 2022",
+      "description": "Earned the Infosys Insta Award for successfully developing and deploying a multilingual chatbot using Microsoft Bot Framework and Azure LogicApps for customer support, resulting in a 13% increase in client leads."
     },
     {
-      "date": "Jan 9, 2020",
-      "description": "I’m teaching COMP 590: Computer Architecture (undergrad) in Spring 2020."
+      "date": "March 3 2021",
+      "description": "Joined Infosys as ‘Systems Engineer’, I'm officially an Infocian"
     },
     {
-      "date": "Jan 7, 2020",
-      "description": "‘Accelerated Virtualization of Accelerators’ to appear at ASPLOS ‘20"
-    },
-    {
-      "date": "Jul 26, 2024",
-      "description": "‘Accelerated Virtualization of Accelerators’ to appear at ASPLOS ‘20",
+      "date": "Jul 1, 2020",
+      "description": "‘Virtual Reality: The New Reality’, m first writing was published in CSI Communications July 2020 Edition",
       "link": "https://www.researchgate.net/publication/343095838_Virtual_Reality_An_Overview"
     }
   ]
