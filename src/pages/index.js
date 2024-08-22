@@ -1,25 +1,18 @@
 // pages/index.js
-import React from "react";
-import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { useEffect, useRef } from "react";
-import Typewriter from "typewriter-effect";
-import {
-  FaEnvelope,
-  FaLinkedin,
-  FaInstagram,
-  FaGithub,
-  FaMicrosoft,
-} from "react-icons/fa";
-import Link from "next/link";
+import React, { useEffect, useRef } from "react"; // Import React and necessary hooks
+import Head from "next/head"; // Next.js component to modify the document head
+import Navbar from "../components/Navbar"; // Custom Navbar component
+import Footer from "../components/Footer"; // Custom Footer component
+import Typewriter from "typewriter-effect"; // Typewriter effect component
+import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"; // Import icons from react-icons library
+import Link from "next/link"; // Next.js Link component for client-side navigation
+import Image from "next/image"; // Import Next.js Image component for optimized images
+import certifications from "../data/certifications"; // Custom data file for certifications
+import settings from "../data/sliderSettings"; // Custom settings for the slider
+import path from "path"; // Node.js path module for file paths
 import Slider from "react-slick";
-import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import certifications from "../data/certifications";
-import settings from "../data/sliderSettings";
-import path from "path";
 
 // Fetch activities data from a JSON file at build time
 export async function getStaticProps() {
@@ -37,15 +30,14 @@ export async function getStaticProps() {
 
 // Main component for the home page
 export default function Home({ activities, isDarkMode, toggleDarkMode }) {
-  // Create a ref to store references to multiple elements
-  const elementsRef = useRef([]);
+  const elementsRef = useRef([]); // Create a ref to store references to multiple elements
 
   // useEffect hook to handle side effects
   useEffect(() => {
     const handleLoad = () => {
       // Create an intersection observer to detect when elements come into view
       const observer = new IntersectionObserver(
-        (entries, observer) => {
+        (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("in-view"); // Add 'in-view' class when element is in view
@@ -102,9 +94,9 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   options={{
                     strings: [
                       "The software professional you need, with a sharp focus on AI-driven solutions and business analytics to transform your challenges into success.",
-                    ], // Text for typewriter effect
+                    ],
                     autoStart: true, // Auto start the typewriter
-                    loop: true, // Do not loop the typewriter effect
+                    loop: true, // Loop the typewriter effect
                   }}
                 />
               </div>
@@ -176,8 +168,8 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 <Image
                   src="/images/profile.jpg"
                   alt="Profile"
-                  width={448} // Replace with your actual image width
-                  height={640} // Replace with your actual image height
+                  width={448}
+                  height={640}
                   className="rounded-t-lg rounded-b-lg object-cover"
                 />
               </div>
@@ -400,7 +392,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               {certifications.map((certification, index) => (
                 <div
                   key={index}
-                  className="px-4 flex flex-col justify-between h-72" // Fixed height for mobile screens
+                  className="px-4 flex flex-col justify-between h-[400px]"
                 >
                   <a
                     href={certification.url}
@@ -408,17 +400,12 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                     rel="noopener noreferrer"
                     className="block transform transition-transform hover:scale-105 h-full"
                   >
-                    <div
-                      className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-between"
-                      style={{
-                        overflow: "hidden", // Prevent content overflow
-                      }}
-                    >
+                    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
                       {certification.icon} {/* Display the icon */}
-                      <h3 className="text-xl font-semibold mb-4 flex-grow-0">
+                      <h3 className="text-2xl font-semibold mb-4 flex-grow-0">
                         {certification.title}
                       </h3>
-                      <p className="text-gray-700 dark:text-gray-300 flex-grow overflow-hidden">
+                      <p className="text-gray-700 dark:text-gray-300 flex-grow">
                         {certification.description
                           .split("\n")
                           .map((line, index) => (
@@ -426,7 +413,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                               {line}
                               <br />
                             </React.Fragment>
-                          ))}
+                          ))}{" "}
                       </p>
                     </div>
                   </a>

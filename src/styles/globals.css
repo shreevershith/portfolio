@@ -8,27 +8,43 @@ body, html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling caused by overflow */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-.slide-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
-.slide-up.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.bg-white {
+  background-color: #ffffff;
 }
 
-.wave-divider {
-  display: block;
-  height: 100px;
+.text-center {
+  text-align: center;
 }
 
-a.flex.items-center:hover {
-  transform: scale(1.05);
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .slick-slide {
@@ -38,9 +54,28 @@ a.flex.items-center:hover {
 }
 
 .slick-slide > div {
-  width: 100%; /* Ensure the content takes up the full width */
-  max-width: 100%; /* Prevents it from overflowing */
-  padding: 10px; /* Add padding to avoid content touching the edges */
+  width: 100%; /* Full width for mobile responsiveness */
+  max-width: 100%;
+  padding: 10px; /* Padding to avoid edges */
   box-sizing: border-box;
 }
 
+.slick-prev, .slick-next {
+  color: #000; /* Customize arrow colors */
+  z-index: 1; /* Ensure arrows are above other content */
+}
+
+.slick-dots li button:before {
+  font-size: 12px; /* Dot size */
+  color: #000; /* Dot color */
+}
+
+.slick-dots {
+  bottom: -30px; /* Adjust position of dots */
+}
+
+@media (max-width: 600px) {
+  .slick-slide > div {
+    padding: 5px; /* Adjust padding for small screens */
+  }
+}
