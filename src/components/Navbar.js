@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FaUser,
@@ -10,9 +10,35 @@ import {
 
 const Navbar = ({ isDarkMode, toggleDarkMode }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [navbarVisible, setNavbarVisible] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+
+    const handleMouseMove = () => {
+      clearTimeout(timeout);
+      setNavbarVisible(true);
+      timeout = setTimeout(() => {
+        setNavbarVisible(false);
+      }, 2000); // Auto-hide after 2 seconds of inactivity
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      clearTimeout(timeout);
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex items-center">
+    <nav
+      className={`fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex items-center transition-opacity duration-300 ${
+        navbarVisible ? "opacity-100" : "opacity-0"
+      }`}
+      onMouseEnter={() => setNavbarVisible(true)}
+      onMouseLeave={() => setNavbarVisible(false)}
+    >
       <div
         className="flex flex-col items-center bg-gray-800 dark:bg-gray-700 p-2 space-y-8 rounded-lg"
         onMouseLeave={() => setHoveredItem(null)}

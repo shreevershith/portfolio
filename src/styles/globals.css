@@ -4,8 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+body, html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling caused by overflow */
 }
 
 .slide-up {
@@ -27,3 +30,17 @@ html {
 a.flex.items-center:hover {
   transform: scale(1.05);
 }
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide > div {
+  width: 100%; /* Ensure the content takes up the full width */
+  max-width: 100%; /* Prevents it from overflowing */
+  padding: 10px; /* Add padding to avoid content touching the edges */
+  box-sizing: border-box;
+}
+

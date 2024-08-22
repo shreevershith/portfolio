@@ -1,25 +1,25 @@
 // pages/index.js
-import React from "react"; // Import React
-import Head from "next/head"; // Next.js component to modify the document head
-import Navbar from "../components/Navbar"; // Custom Navbar component
-import Footer from "../components/Footer"; // Custom Footer component
-import { useEffect, useRef } from "react"; // React hooks for managing side effects and refs
-import Typewriter from "typewriter-effect"; // Typewriter effect component
+import React from "react";
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { useEffect, useRef } from "react";
+import Typewriter from "typewriter-effect";
 import {
   FaEnvelope,
   FaLinkedin,
   FaInstagram,
   FaGithub,
   FaMicrosoft,
-} from "react-icons/fa"; // Import icons including Microsoft from react-icons library
-import Link from "next/link"; // Next.js Link component for client-side navigation
-import Slider from "react-slick"; // Slider component for carousels
-import Image from "next/image"; // Import Next.js Image component for optimized images
-import "slick-carousel/slick/slick.css"; // Slider styles
-import "slick-carousel/slick/slick-theme.css"; // Additional slider styles
-import certifications from "../data/certifications"; // Custom data file for certifications
-import settings from "../data/sliderSettings"; // Custom settings for the slider
-import path from "path"; // Node.js path module for file paths
+} from "react-icons/fa";
+import Link from "next/link";
+import Slider from "react-slick";
+import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import certifications from "../data/certifications";
+import settings from "../data/sliderSettings";
+import path from "path";
 
 // Fetch activities data from a JSON file at build time
 export async function getStaticProps() {
@@ -76,7 +76,6 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
 
   return (
     <div className="scroll-smooth dark:bg-gray-900 dark:text-white">
-      {" "}
       {/* Main container with smooth scrolling and dark mode styles */}
       <Head>
         <title>Shreevershith</title> {/* Page title */}
@@ -95,10 +94,10 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
         >
           <div className="max-w-6xl mx-auto px-4">
             <div className="mb-4">
-              <h1 className="text-left text-8xl font-light tracking-wide text-black-200 dark:text-gray-300">
+              <h1 className="text-left text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light tracking-wide text-black-200 dark:text-gray-300">
                 SHREEVERSHITH KOLLABETTU
               </h1>
-              <div className="text-xl mb-4 typewriter">
+              <div className="text-lg sm:text-xl mb-4 typewriter">
                 <Typewriter
                   options={{
                     strings: [
@@ -109,7 +108,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   }}
                 />
               </div>
-              <p className="text-l mb-4">
+              <p className="text-sm sm:text-base md:text-lg mb-4">
                 If you&apos;re looking for a versatile software professional
                 with expertise in AI and Business Analytics, I bridge the gap
                 between technology and business needs, driving efficiency and
@@ -316,7 +315,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   organize information within the aviation sector. It
                   incorporates airports, cities, passengers, alliances,
                   airlines, and airplane relationships, each with specific
-                  attributes to capture relevant details
+                  attributes to capture relevant details.
                 </p>
               </div>
 
@@ -401,7 +400,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
               {certifications.map((certification, index) => (
                 <div
                   key={index}
-                  className="px-4 flex flex-col justify-between h-[400px]"
+                  className="px-4 flex flex-col justify-between h-72" // Fixed height for mobile screens
                 >
                   <a
                     href={certification.url}
@@ -409,12 +408,17 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                     rel="noopener noreferrer"
                     className="block transform transition-transform hover:scale-105 h-full"
                   >
-                    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+                    <div
+                      className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-between"
+                      style={{
+                        overflow: "hidden", // Prevent content overflow
+                      }}
+                    >
                       {certification.icon} {/* Display the icon */}
-                      <h3 className="text-2xl font-semibold mb-4 flex-grow-0">
+                      <h3 className="text-xl font-semibold mb-4 flex-grow-0">
                         {certification.title}
                       </h3>
-                      <p className="text-gray-700 dark:text-gray-300 flex-grow">
+                      <p className="text-gray-700 dark:text-gray-300 flex-grow overflow-hidden">
                         {certification.description
                           .split("\n")
                           .map((line, index) => (
@@ -422,7 +426,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                               {line}
                               <br />
                             </React.Fragment>
-                          ))}{" "}
+                          ))}
                       </p>
                     </div>
                   </a>
@@ -485,7 +489,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
           </div>
         </section>
       </main>
-      <Footer /> {/* Footer component */}
+      <Footer />
     </div>
   );
 }
