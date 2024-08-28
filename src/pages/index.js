@@ -256,7 +256,7 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                 className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() =>
                   window.open(
-                    "https://github.com/shreevershith/project3",
+                    "https://github.com/shreevershith/portfolio",
                     "_blank"
                   )
                 }
