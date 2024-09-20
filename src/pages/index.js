@@ -4,7 +4,13 @@ import Head from "next/head"; // Next.js component to modify the document head
 import Navbar from "../components/Navbar"; // Custom Navbar component
 import Footer from "../components/Footer"; // Custom Footer component
 import Typewriter from "typewriter-effect"; // Typewriter effect component
-import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"; // Import icons from react-icons library
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaInstagram,
+  FaGithub,
+  FaPhoneAlt,
+} from "react-icons/fa"; // Import icons from react-icons library
 import Link from "next/link"; // Next.js Link component for client-side navigation
 import Image from "next/image"; // Import Next.js Image component for optimized images
 import certifications from "../data/certifications"; // Custom data file for certifications
@@ -161,6 +167,16 @@ export default function Home({ activities, isDarkMode, toggleDarkMode }) {
                   >
                     <FaGithub className="mr-2" /> GitHub
                   </a>
+                  {/* <a
+                    href="tel:+1234567890"
+                    className="flex items-center bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-full mb-2 hover:scale-105 transition-transform"
+                  >
+                    <FaPhoneAlt
+                      className="mr-2"
+                      style={{ transform: "none" }}
+                    />{" "}
+                    Call
+                  </a> */}
                 </div>
               </div>
 
